@@ -16,8 +16,15 @@ public class Main {
         System.out.printf("What is your height in inches? ");
         double height= Integer.parseInt(scan.nextLine());
 
-        double bmi = Math.ceil(((double)(weight/(height*height)))*703*10)/10;
-        System.out.println("Your BMI is "+bmi);
+        double BMI = Math.ceil(((double)(weight/(height*height)))*703*10)/10;
+        System.out.println("Your BMI is "+BMI);
+        if(BMI < 18.5){
+            System.out.println("You are underweight. You should see your doctor.");
+        }else if (BMI > 25){
+            System.out.println("You are overweight. You should see your doctor.");
+        }else{
+            System.out.println("You are within the ideal weight range.");
+        }
         // write your code here
     }
 }
